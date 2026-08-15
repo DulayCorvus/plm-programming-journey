@@ -1,43 +1,52 @@
 #include <stdio.h>
+#include <stdbool.h>
+int main()
+{
+    int grade = 0;
+    int check;
+    bool stillchecking;
 
-int main() {
-    //Making a grade calulator. Calculates what grade you'll get in a subject.
-    int grade;
-    printf("welcome to the Grade Calculator!\n");
-    printf("to begin, please input your grade:");
-    scanf ("%d", &grade);
+  do{
 
-    if (grade < 0 || grade > 100)
-    {
-        printf("invalid grade, try again.");
+     printf("what is your grade? ");
+  scanf("%d", &grade);
+
+  if (grade > 0 && grade < 100){
+   
+    if (grade >= 98){
+        printf("Highest Honors!\n");
     }
-    
-    else {
-        
-    printf("your numerical grade is: %d\n", grade);
-     
-    if (grade >= 98) {
-        printf("your grade is 1");
+
+    else if (grade >= 95){
+        printf("High Honors!\n");
     }
-    else if (grade >= 95) {
-        printf ("your grade is 1.25");
+
+    else if (grade >= 90){
+        printf("Honors!\n");
     }
-    else if (grade >= 90) {
-        printf ("your grade is 1.75");
+
+    else if (grade >= 75){
+        printf("No Honors\n");
     }
-    else if (grade >= 85 ) {
-        printf ("your grade is 2.25");
+
+    else{
+        printf("failed\n");
     }
-    else if (grade >= 80) {
-        printf ("your grade is 2");
-    }
-    else if (grade >= 75) {
-        printf ("your grade is 3");
-    }
-    else if (grade < 75 ) {
-        printf ("you have failed");
-    }
-}
-    
-    return 0;
+  }
+
+  else{printf("nothing\n");}
+  
+  
+  printf("still checking? 1 for yes, 0 for no\n");
+  scanf("%d", &check);
+  check = stillchecking ? true : false;
+
+  if(stillchecking) {
+   printf( "Restarting.");
+  }
+
+  else{
+  return 0;}
+  
+  }while (check = 1);
 }
