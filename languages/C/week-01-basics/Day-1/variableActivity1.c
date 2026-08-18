@@ -49,4 +49,4 @@ int main()
   return 0;}
   
   }while (check = 1);
-}
+}z
